@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.banana</groupId>
+    <artifactId>banana-spring-boot-starter</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0.SNAPSHOT</version>
+
+    <modules>
+        <module>banana-common-spring-boot-starter</module>
+        <module>banana-swagger-spring-boot-starter</module>
+        <module>banana-mybatis-spring-boot-starter</module>
+        <module>banana-log-spring-boot-starter</module>
+        <module>banana-job-spring-boot-starter</module>
+        <module>banana-http-secret-spring-boot-starter</module>
+        <module>banana-cors-spring-boot-starter</module>
+        <module>banana-redis-spring-boot-starter</module>
+        <module>banana-i18n-spring-boot-starter</module>
+        <module>banana-APIException-spring-boot-starter</module>
+        <module>banana-lcn-spring-boot-starter</module>
+        <module>banana-feign-spring-boot-starter</module>
+        <module>banana-oss-spring-boot-starter</module>
+        <module>banana-amqp-spring-boot-starter</module>
+        <module>banana-bus-spring-boot-starter</module>
+        <module>banana-auth2-spring-boot-starter</module>
+        <!--<module>banana-sms-spring-boot-starter</module>-->
+        <module>banana-mail-spring-boot-starter</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <spring-cloud-dependencies.version>Finchley.RELEASE</spring-cloud-dependencies.version>
+        <mybatis-spring-boot-starter.version>1.3.4</mybatis-spring-boot-starter.version>
+        <mybatis-plus-generator.version>3.1.0</mybatis-plus-generator.version>
+        <velocity-engine-core.version>2.0</velocity-engine-core.version>
+        <com.alibaba.druid.version>1.1.12</com.alibaba.druid.version>
+        <com.baomidou.version>3.0.7.1</com.baomidou.version>
+        <com.txlcn.version>5.0.5.RELEASE</com.txlcn.version>
+        <spring-boot-autoconfigure.version>2.0.3.RELEASE</spring-boot-autoconfigure.version>
+        <lombok.version>1.16.22</lombok.version>
+        <springfox-swagger.version>2.9.2</springfox-swagger.version>
+        <joda-time.version>2.9.9</joda-time.version>
+        <commons.lang3.version>3.9</commons.lang3.version>
+        <mysql-connector-java.version>5.1.47</mysql-connector-java.version>
+        <github.global.server>github</github.global.server>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>cn.com.guju</groupId>-->
+                <!--<artifactId>CCP_REST_SMS_SDK_JAVA_v2.6.3r</artifactId>-->
+                <!--<version>${CCP_REST_SMS_SDK_JAVA_v2.6.3r.version}</version>-->
+            <!--</dependency>-->
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${com.alibaba.druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.txlcn</groupId>
+                <artifactId>txlcn-tc</artifactId>
+                <version>${com.txlcn.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.txlcn</groupId>
+                <artifactId>txlcn-txmsg-netty</artifactId>
+                <version>${com.txlcn.version}</version>
+            </dependency>
+
+            <!-- MYSQL驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${com.baomidou.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+
+            <!-- 模板引擎 代码生成 -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity-engine-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-common-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-swagger-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-log-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-mybatis-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-job-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-http-secret-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-cors-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-redis-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-i18n-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-APIException-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-lcn-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-feign-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-oss-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-amqp-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-bus-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-auth2-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>com.banana</groupId>-->
+                <!--<artifactId>banana-sms-spring-boot-starter</artifactId>-->
+                <!--<version>1.0.8.RELEASE</version>-->
+            <!--</dependency>-->
+
+            <dependency>
+                <groupId>com.banana</groupId>
+                <artifactId>banana-mail-spring-boot-starter</artifactId>
+                <version>1.0.0.SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring-boot-autoconfigure.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>2.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>2.8.3</version>
+            </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>commons-lang</groupId>-->
+                <!--<artifactId>commons-lang</artifactId>-->
+                <!--<version>2.6</version>-->
+            <!--</dependency>-->
+
+            <dependency>
+                <groupId>org.jfairy</groupId>
+                <artifactId>jfairy</artifactId>
+                <version>0.2.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.8.8</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>2.0.0.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.7</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>nexus-releases</id>-->
+            <!--<name>Releases</name>-->
+            <!--<url>http://nexus3.hanyuan.vip:9081/repository/maven-releases</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>nexus-snapshots</id>-->
+            <!--<name>Snapshot</name>-->
+            <!--<url>http://nexus3.hanyuan.vip:9081/repository/maven-snapshots</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
+
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>nexus</id>-->
+            <!--<name>Nexus Repository</name>-->
+            <!--<url>http://nexus3.hanyuan.vip:9081/repository/maven-public/</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+            <!--&lt;!&ndash;snapshots默认是关闭的,需要开启  &ndash;&gt;-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>king-mvn-repo</id>-->
+            <!--<url>file:${basedir}/repo</url>-->
+        <!--</repository>-->
+    <!--</distributionManagement>-->
+
+
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>mvn-repo</id>-->
+            <!--<url>https://raw.github.com/jinpengxiang/mvn-repo/master</url>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+                <!--<updatePolicy>always</updatePolicy>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://raw.github.com/jinpengxiang/mvn-repo/lcn-5.0.5.RELEASE</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <!-- 聚合POM父级修复MVN INSTALL -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <generateBackupPoms>false</generateBackupPoms>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>utf-8</encoding>
+                    <useDefaultDelimiters>true</useDefaultDelimiters>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <altDeploymentRepository>maven.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version >0.12</version>
+                <configuration>
+                    <message >Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory><!--本地jar地址-->
+                    <branch>refs/heads/starter-${project.version}</branch><!--分支的名称-->
+                    <merge>true</merge>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <repositoryName>mvn-repo</repositoryName><!--对应github上创建的仓库名称 name-->
+                    <repositoryOwner>jinpengxiang</repositoryOwner><!--github 仓库所有者即登录用户名-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
