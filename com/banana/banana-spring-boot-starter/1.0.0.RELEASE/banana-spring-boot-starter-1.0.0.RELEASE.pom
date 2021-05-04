@@ -330,24 +330,24 @@
         <!--</repository>-->
     <!--</repositories>-->
 
-    <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>king-mvn-repo</id>-->
-            <!--<url>file:${basedir}/repo</url>-->
-        <!--</repository>-->
-    <!--</distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>king-mvn-repo</id>
+            <url>file:${basedir}/repo</url>
+        </repository>
+    </distributionManagement>
 
 
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>mvn-repo</id>-->
-            <!--<url>https://raw.github.com/jinpengxiang/mvn-repo/master</url>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-                <!--<updatePolicy>always</updatePolicy>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <id>mvn-repo</id>
+            <url>https://raw.github.com/jinpengxiang/mvn-repo/master</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <!--<repositories>-->
         <!--<repository>-->
